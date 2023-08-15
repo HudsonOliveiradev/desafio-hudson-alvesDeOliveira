@@ -31,11 +31,11 @@ class CaixaDaLanchonete {
         return "Item inválido!";
       }
       
-      itensDoPedido.push({ ...item, quantidade: parseInt(quantidade) });
+      pedido.push({ ...item, quantidade: parseInt(quantidade) });
       total += item.valor * parseInt(quantidade);
     }
 
-    if (itensDoPedido.length === 0) {
+    if (pedido.length === 0) {
       return "Não há itens no carrinho de compra!";
     }
 
